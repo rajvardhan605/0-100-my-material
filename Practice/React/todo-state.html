@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo</title>
+  </head>
+  <body>
+    <input type="text" placeholder="title" id="title" /><br /><br />
+    <input type="text" placeholder="description" id="description" /><br /><br />
+    <script>
+      function addTodo(state) {
+        for (let i = 0; i < state.length; i++) {
+          let title_todo = document.createElement("p");
+          let description_todo = document.createElement("p");
+          title_todo.innerText = state[i].title;
+          description_todo.innerText = state[i].description;
+          let done = document.createElement("button");
+          done.innerText = "mark as complete";
+          done.setAttribute("onclick", `onDone(${state[i].id})`);
+          document.body.appendChild(title_todo);
+          document.body.appendChild(description_todo);
+          document.body.appendChild(done);
+        }
+      }
+      function onDone(id) {
+        let done = document.getElementById(id);
+        done.innerText = "completed";
+      }
+      let state = [
+        {
+          id: 1,
+          title: "study",
+          description: "1 hr",
+        },
+        {
+          id: 2,
+          title: "gaming",
+          description: "2hr",
+        },
+        {
+          id: 3,
+          title: "running",
+          description: "4hr",
+        },
+      ];
+      addTodo(state);
+    </script>
+  </body>
+</html>
