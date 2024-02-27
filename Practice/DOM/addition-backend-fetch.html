@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Addition</title>
+  </head>
+  <script>
+    async function sum() {
+      let a = document.getElementById("n-1").value;
+      let b = document.getElementById("n-2").value;
+      let sum = 0;
+      // fetch(`https://sum-server.100xdevs.com/sum?a=${a}&b=${b}`).then(function (
+      //   response
+      // ) {
+      //   response.text().then(function (ans) {
+      //     document.getElementById("ans").innerHTML = ans;
+      //   });
+      // });
+      let response = await fetch(`https://sum-server.100xdevs.com/sum?a=${a}&b=${b}`);
+      let ans = await response.text();
+      document.getElementById("ans").innerHTML = ans;
+    }
+  </script>
+  <body>
+    Enter 1st no :- <input type="number" id="n-1" /><br /><br />
+    Enter 2nd no :- <input type="number" id="n-2" /><br /><br />
+    <input type="button" value="Calclulate Sum" onclick="sum()" />
+    <p id="ans"></p>
+  </body>
+</html>

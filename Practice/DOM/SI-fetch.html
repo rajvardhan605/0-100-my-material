@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SI</title>
+  </head>
+  <script>
+    async function SI() {
+      let a = document.getElementById("n-1").value;
+      let b = document.getElementById("n-2").value;
+      let c = document.getElementById("n-3").value;
+      let response = await fetch(
+        `https://sum-server.100xdevs.com/interest?principal=${a}&rate=${b}&time=${c}`
+      );
+      let ans = await response.json();
+      document.getElementById("ans").innerHTML = "Total is " + ans.total + " and interest is "+ans.interest;
+    }
+  </script>
+  <body>
+    Enter Principle :- <input type="number" id="n-1" /><br /><br />
+    Enter Rate :- <input type="number" id="n-2" /><br /><br />
+    Enter Time :- <input type="number" id="n-3" /><br /><br />
+    <input type="button" value="Calclulate SI" onclick="SI()" />
+    <p id="ans"></p>
+  </body>
+</html>

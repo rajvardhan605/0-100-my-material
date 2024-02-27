@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Addition</title>
+  </head>
+  <script>
+    let timeout;
+    function debounceSum(){
+      clearTimeout(timeout);
+      timeout = setTimeout(function(){
+        sum();
+      },500);
+    }
+    async function sum() {
+      let a = document.getElementById("n-1").value;
+      let b = document.getElementById("n-2").value;
+      let response = await fetch(`https://sum-server.100xdevs.com/sum?a=${a}&b=${b}`);
+      let ans = await response.text();
+      document.getElementById("ans").innerHTML = ans;
+    }
+  </script>
+  <body>
+    Enter 1st no :- <input type="number" id="n-1" oninput="debounceSum()"/><br /><br />
+    Enter 2nd no :- <input type="number" id="n-2" oninput="debounceSum()"/><br /><br />
+    <p id="ans"></p>
+  </body>
+</html>
