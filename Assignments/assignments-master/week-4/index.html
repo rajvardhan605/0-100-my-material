@@ -4,6 +4,31 @@
 <head>
   <script>
     let globalId = 1;
+<<<<<<< HEAD
+    let todoState = [{"title":"sdg","description":"asdf","id":1},{"title":"sdg","description":"asdf","id":2}];
+    let oldTodoState = [{"title":"sdg","description":"asdf","id":1},{"title":"sdg","description":"asdf","id":2},{"title":"sdg","description":"asdf","id":3}];
+
+    function addTodoToDom() {
+      let todo = document.getElementById("todos");
+      todo.innerHTML = JSON.stringify(todoState);
+    }
+
+    function removeTodoFromDom(todo) {
+      for(let i=0; i<todoState.length; i++){
+        if(todo.id == todoState[i].id){
+          todoState.pop(todoState[i]);
+        }
+      }
+    }
+
+    function updateTodoInDom(oldTodo, newTodo) {
+        for(let i=0; i<todoState.length; i++){
+          if(todoState[i].id==oldTodo.id){
+            todoState[i].title = newTodo.title;
+            todoState[i].description = newTodo.description;
+          }
+        }
+=======
     let todoState = [];
     let oldTodoState = [];
 
@@ -17,10 +42,15 @@
 
     function updateTodoInDom(oldTodo, newTodo) {
         
+>>>>>>> b0505ddb8c974d7e5be8d00357ace472cbf5475f
     }
 
     function updateState(newTodos) {
       // calculate the diff b/w newTodos and oldTodos.
+<<<<<<< HEAD
+
+=======
+>>>>>>> b0505ddb8c974d7e5be8d00357ace472cbf5475f
       // More specifically, find out what todos are - 
       // 1. added
       // 2. deleted
@@ -28,6 +58,38 @@
       const added = [];
       const deleted = [];
       const updated = [];
+<<<<<<< HEAD
+      if(oldTodoState.length>newTodos.length){
+        let isPresent = false;
+        for(let i=0; i<newTodos.length; i++){
+          for(let j=0; j<oldTodoState.length; j++){
+            if(newTodos[i].id == oldTodoState[j].id){
+              isPresent = true;
+              continue;
+            }
+          }
+          if(!isPresent){
+            added = added + newTodos[i];
+          }
+        }
+      }
+      else if(oldTodoState.length<newTodos.length){
+        let isPresent = false;
+        for(let i=0; i<oldTodoState.length; i++){
+          for(let j=0; j<newTodos.length; j++){
+            if(oldTodoState[i].id == newTodos[j].id){
+              isPresent = true;
+            }
+          }
+          if(!isPresent){
+            deleted = deleted + oldTodoState[i];
+          }
+        }
+      }
+      addTodoToDom(added);
+      removeTodoFromDom(deleted);
+=======
+>>>>>>> b0505ddb8c974d7e5be8d00357ace472cbf5475f
       // calculate these 3 arrays
       // call addTodo, removeTodo, updateTodo functions on each of the
       // elements

@@ -5,6 +5,7 @@
  */
 
 function wait1(t) {
+<<<<<<< HEAD
   return new Promise((resolve)=>{
     setTimeout(resolve,t*1000)
   })
@@ -28,6 +29,21 @@ function calculateTime(t1, t2, t3) {
     const p2 = performance.now();
     return p2-p1;
   })
+=======
+
+}
+
+function wait2(t) {
+
+}
+
+function wait3(t) {
+
+}
+
+function calculateTime(t1, t2, t3) {
+
+>>>>>>> b0505ddb8c974d7e5be8d00357ace472cbf5475f
 }
 
 module.exports = calculateTime;

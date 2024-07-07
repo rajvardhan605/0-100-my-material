@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { User } = require("../db");
 const jwt = require("jsonwebtoken");
 const { jwtPassword } = require("../jwtsecret");
@@ -21,3 +22,11 @@ async function userMiddleware(req, res, next) {
 }
 
 module.exports = userMiddleware;
+=======
+function userMiddleware(req, res, next) {
+    // Implement user auth logic
+    // You need to check the headers and validate the user from the user DB. Check readme for the exact headers to be expected
+}
+
+module.exports = userMiddleware;
+>>>>>>> b0505ddb8c974d7e5be8d00357ace472cbf5475f

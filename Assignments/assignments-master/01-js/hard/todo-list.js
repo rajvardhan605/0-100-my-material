@@ -11,6 +11,7 @@
 */
 
 class Todo {
+<<<<<<< HEAD
   constructor(){
     this.todo = [];
   }
@@ -37,6 +38,9 @@ class Todo {
   clear(){
     this.todo = [];
   }
+=======
+
+>>>>>>> b0505ddb8c974d7e5be8d00357ace472cbf5475f
 }
 
 module.exports = Todo;

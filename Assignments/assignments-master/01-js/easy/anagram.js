@@ -5,6 +5,7 @@
 */
 
 function isAnagram(str1, str2) {
+<<<<<<< HEAD
   str1 = str1.toLowerCase();
   str2 = str2.toLowerCase();
   let ans = true;
@@ -25,6 +26,9 @@ function isAnagram(str1, str2) {
     }
   }
   return true;
+=======
+
+>>>>>>> b0505ddb8c974d7e5be8d00357ace472cbf5475f
 }
 
 module.exports = isAnagram;

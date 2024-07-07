@@ -1,5 +1,6 @@
 const { Router } = require("express");
 const adminMiddleware = require("../middleware/admin");
+<<<<<<< HEAD
 const { Admin } = require("../db");
 const { Course } = require("../db");
 const router = Router();
@@ -63,3 +64,25 @@ router.get("/courses", adminMiddleware, async (req, res) => {
 });
 
 module.exports = router;
+=======
+const router = Router();
+
+// Admin Routes
+router.post('/signup', (req, res) => {
+    // Implement admin signup logic
+});
+
+router.post('/signin', (req, res) => {
+    // Implement admin signup logic
+});
+
+router.post('/courses', adminMiddleware, (req, res) => {
+    // Implement course creation logic
+});
+
+router.get('/courses', adminMiddleware, (req, res) => {
+    // Implement fetching all courses logic
+});
+
+module.exports = router;
+>>>>>>> b0505ddb8c974d7e5be8d00357ace472cbf5475f

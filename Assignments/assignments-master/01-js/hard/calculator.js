@@ -16,6 +16,7 @@
   Once you've implemented the logic, test your code by running
 */
 
+<<<<<<< HEAD
 class Calculator {
   constructor() {
     this.result = 0;
@@ -50,5 +51,8 @@ class Calculator {
     return this.result;
   }
 }
+=======
+class Calculator {}
+>>>>>>> b0505ddb8c974d7e5be8d00357ace472cbf5475f
 
 module.exports = Calculator;

@@ -10,7 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "express": "^4.18.2",
+=======
+>>>>>>> b0505ddb8c974d7e5be8d00357ace472cbf5475f
     "jsonwebtoken": "^9.0.2",
     "zod": "^3.22.4"
   }

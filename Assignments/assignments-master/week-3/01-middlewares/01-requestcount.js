@@ -10,11 +10,14 @@ let requestCount = 0;
 // maintain a count of the number of requests made to the server in the global
 // requestCount variable
 
+<<<<<<< HEAD
 app.use((req,res,next)=>{
   requestCount++;
   next();
 })
 
+=======
+>>>>>>> b0505ddb8c974d7e5be8d00357ace472cbf5475f
 app.get('/user', function(req, res) {
   res.status(200).json({ name: 'john' });
 });
@@ -27,6 +30,9 @@ app.get('/requestCount', function(req, res) {
   res.status(200).json({ requestCount });
 });
 
+<<<<<<< HEAD
 //app.listen(3000);
 
+=======
+>>>>>>> b0505ddb8c974d7e5be8d00357ace472cbf5475f
 module.exports = app;

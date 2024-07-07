@@ -9,6 +9,7 @@ There is no automated test for this one, this is more for you to understand time
 */
 
 function calculateTime(n) {
+<<<<<<< HEAD
     let t1 = new Date();
     let sum = 0;
     for(let i=1; i<=n; i++){
@@ -18,3 +19,7 @@ function calculateTime(n) {
     console.log((t2-t1)/1000);
 }
 calculateTime(100000000000000000000000000000000000000);
+=======
+    return 0.01;
+}
+>>>>>>> b0505ddb8c974d7e5be8d00357ace472cbf5475f

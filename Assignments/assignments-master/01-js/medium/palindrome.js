@@ -4,6 +4,7 @@
 */
 
 function isPalindrome(str) {
+<<<<<<< HEAD
   let str2 = str.toLowerCase();
   for(let i=0,j=str2.length-1; i<str2.length/2; i++,j--){
     if(str2.length>1){
@@ -22,4 +23,9 @@ function isPalindrome(str) {
 }
 
 
+=======
+  return true;
+}
+
+>>>>>>> b0505ddb8c974d7e5be8d00357ace472cbf5475f
 module.exports = isPalindrome;
